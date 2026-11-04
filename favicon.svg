@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <!-- Minimalist Architectural Background Tile -->
+  <rect width="32" height="32" rx="6" fill="#0A0A0A" />
+  <rect x="0.5" y="0.5" width="31" height="31" rx="5.5" fill="none" stroke="#27272A" stroke-width="1" />
+  
+  <!-- Crisp Monochrome Flat Double Slash (//) -->
+  <polygon points="13,7 17,7 11,25 7,25" fill="#FFFFFF" />
+  <polygon points="21,7 25,7 19,25 15,25" fill="#FFFFFF" />
+</svg>
