@@ -1,0 +1,303 @@
+.adminShell {
+  min-height: 100vh;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  display: flex;
+  flex-direction: column;
+}
+
+/* White Top Header Bar */
+.topBar {
+  height: var(--navbar-height);
+  background-color: var(--bg-inverted);
+  color: var(--text-on-light);
+  border-bottom: 1px solid var(--border-hairline-light);
+  padding: 0 clamp(1.25rem, 3vw, 2.5rem);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: var(--z-navbar);
+}
+
+.topBarLeft,
+.topBarRight {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.brandSquare {
+  width: 9px;
+  height: 9px;
+  background-color: var(--text-on-light);
+}
+
+.cmsTitle {
+  font-family: var(--font-display);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.authBadge {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  padding: 0.2rem 0.5rem;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+.adminEmail {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--text-on-light-secondary);
+}
+
+.publicSiteLink {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  padding: 0.45rem 0.8rem;
+  border: 1px solid var(--border-hairline-light-strong);
+  color: var(--text-on-light);
+  transition: background-color var(--duration-fast) ease;
+}
+
+.publicSiteLink:hover {
+  background-color: var(--bg-inverted-subtle);
+}
+
+.logoutBtn {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  padding: 0.45rem 0.85rem;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+/* Workspace Split */
+.workspace {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 270px 1fr;
+}
+
+.sidebar {
+  border-right: 1px solid var(--border-hairline-dark);
+  background-color: var(--bg-secondary);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.navMenu {
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebarLink {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 1.15rem 1.35rem;
+  border-bottom: 1px solid var(--border-hairline-dark);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.1em;
+  color: var(--text-secondary);
+  transition:
+    background-color var(--duration-fast) ease,
+    color var(--duration-fast) ease;
+}
+
+.sidebarLink:hover {
+  background-color: var(--bg-elevated);
+  color: var(--text-primary);
+}
+
+.sidebarLinkActive {
+  background-color: var(--bg-inverted);
+  color: var(--text-on-light);
+  font-weight: 600;
+}
+
+.sidebarLinkActive:hover {
+  background-color: var(--bg-inverted);
+  color: var(--text-on-light);
+}
+
+.linkTextGroup {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.linkIndex {
+  opacity: 0.65;
+}
+
+.unreadBadge {
+  font-size: 0.62rem;
+  font-weight: 700;
+  padding: 0.15rem 0.45rem;
+  background-color: var(--bg-inverted);
+  color: var(--text-on-light);
+  border: 1px solid var(--text-on-light);
+}
+
+.sidebarFooter {
+  padding: 1.25rem 1.35rem;
+  border-top: 1px solid var(--border-hairline-dark);
+}
+
+.securityNote {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.mainContent {
+  padding: clamp(1.5rem, 3.5vw, 3rem);
+  overflow-x: hidden;
+  max-width: 1280px;
+  width: 100%;
+}
+
+/* Auth Gate & UID Setup Screen */
+.authGateScreen {
+  min-height: 100vh;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.authGateCard {
+  max-width: 680px;
+  width: 100%;
+  border: 1px solid var(--border-hairline-dark-strong);
+  background-color: var(--bg-secondary);
+  padding: clamp(1.75rem, 4vw, 3rem);
+  display: flex;
+  flex-direction: column;
+  gap: 1.35rem;
+}
+
+.gateCode {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.16em;
+  color: var(--text-secondary);
+}
+
+.gateTitle {
+  font-family: var(--font-display);
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.gateDesc {
+  font-size: var(--text-sm);
+  line-height: 1.65;
+  color: var(--text-secondary);
+}
+
+.uidDisplayBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  background-color: var(--bg-primary);
+  border: 1px solid var(--bg-inverted);
+  flex-wrap: wrap;
+}
+
+.uidLabel {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.14em;
+  color: var(--text-muted);
+  margin-bottom: 0.25rem;
+}
+
+.uidValue {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  color: var(--text-primary);
+  word-break: break-all;
+}
+
+.uidCopyBtn,
+.signOutBtn {
+  padding: 0.55rem 1rem;
+  background-color: var(--bg-inverted);
+  color: var(--text-on-light);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.1em;
+}
+
+.setupSteps {
+  padding-left: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.gateActions {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--border-hairline-dark);
+}
+
+@media (max-width: 920px) {
+  .workspace {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    border-right: none;
+    border-bottom: 1px solid var(--border-hairline-dark);
+  }
+
+  .navMenu {
+    flex-direction: row;
+    overflow-x: auto;
+  }
+
+  .sidebarLink {
+    border-bottom: none;
+    border-right: 1px solid var(--border-hairline-dark);
+    white-space: nowrap;
+  }
+
+  .sidebarFooter {
+    display: none;
+  }
+
+  .adminEmail {
+    display: none;
+  }
+}
+

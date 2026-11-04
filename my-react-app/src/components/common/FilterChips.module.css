@@ -1,0 +1,65 @@
+.chipGroup {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.55rem 0.9rem;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border-radius: var(--radius-sharp);
+  transition:
+    background-color var(--duration-fast) ease,
+    color var(--duration-fast) ease,
+    border-color var(--duration-fast) ease;
+}
+
+.chipCount {
+  font-size: 0.68rem;
+  opacity: 0.65;
+}
+
+/* Dark Theme */
+.dark .chip {
+  background-color: transparent;
+  border: 1px solid var(--border-hairline-dark);
+  color: var(--text-secondary);
+}
+
+.dark .chip:hover {
+  border-color: var(--border-hairline-dark-strong);
+  color: var(--text-primary);
+}
+
+.dark .chip.active {
+  background-color: var(--bg-inverted);
+  border-color: var(--bg-inverted);
+  color: var(--text-on-light);
+  font-weight: 500;
+}
+
+/* Light Theme */
+.light .chip {
+  background-color: transparent;
+  border: 1px solid var(--border-hairline-light-strong);
+  color: var(--text-on-light-secondary);
+}
+
+.light .chip:hover {
+  border-color: var(--text-on-light);
+  color: var(--text-on-light);
+}
+
+.light .chip.active {
+  background-color: var(--bg-primary);
+  border-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-weight: 500;
+}
+

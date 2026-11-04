@@ -1,0 +1,232 @@
+.aboutSection {
+  position: relative;
+  background-color: var(--bg-primary);
+  padding: var(--section-pad-y) 0;
+  border-bottom: 1px solid var(--border-hairline-dark);
+}
+
+.container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--container-pad);
+}
+
+.editorialGrid {
+  display: grid;
+  grid-template-columns: 4fr 8fr;
+  border-top: 1px solid var(--border-hairline-dark);
+  border-bottom: 1px solid var(--border-hairline-dark);
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity var(--duration-slow) var(--ease-editorial),
+    transform var(--duration-slow) var(--ease-editorial);
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Left 4-Column Sticky Rail */
+.leftRail {
+  border-right: 1px solid var(--border-hairline-dark);
+  padding: clamp(2rem, 3.5vw, 3.5rem) clamp(1.5rem, 3vw, 2.75rem) clamp(2rem, 3.5vw, 3.5rem) 0;
+}
+
+.stickyBox {
+  position: sticky;
+  top: calc(var(--navbar-height) + 2.5rem);
+}
+
+.railTag {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.16em;
+  color: var(--text-muted);
+  margin-bottom: 1.25rem;
+}
+
+.headline {
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--text-primary);
+  margin-bottom: 1.75rem;
+}
+
+.pullQuote {
+  padding-left: 1.15rem;
+  border-left: 2px solid var(--text-primary);
+  font-size: var(--text-base);
+  line-height: 1.65;
+  color: var(--text-secondary);
+  font-style: italic;
+  margin-bottom: 1.5rem;
+}
+
+.handwrittenSignature {
+  font-family: var(--font-hand);
+  font-size: 1.55rem;
+  color: var(--text-primary);
+  transform: rotate(-2deg);
+}
+
+/* Right 8-Column Narrative Spread */
+.rightNarrative {
+  display: flex;
+  flex-direction: column;
+}
+
+.twoColBlock {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-bottom: 1px solid var(--border-hairline-dark);
+}
+
+.twoColBlock:last-child {
+  border-bottom: none;
+}
+
+.narrativeCell {
+  padding: clamp(1.75rem, 3vw, 2.75rem);
+  border-right: 1px solid var(--border-hairline-dark);
+}
+
+.narrativeCell:last-child {
+  border-right: none;
+}
+
+.cellHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.1rem;
+}
+
+.cellIndex {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  color: var(--text-primary);
+  padding: 0.15rem 0.45rem;
+  border: 1px solid var(--border-hairline-dark-strong);
+}
+
+.cellTitle {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  color: var(--text-primary);
+  text-transform: uppercase;
+}
+
+.bodyText {
+  font-size: var(--text-base);
+  line-height: 1.75;
+  color: var(--text-secondary);
+}
+
+/* Education Timeline Block */
+.educationBlock {
+  padding: clamp(1.75rem, 3vw, 2.75rem);
+  border-bottom: 1px solid var(--border-hairline-dark);
+  background-color: rgba(255, 255, 255, 0.015);
+}
+
+.educationList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.educationRow {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 1.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border-hairline-dark);
+}
+
+.eduMeta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.eduIndex {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.eduPeriod {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  color: var(--text-muted);
+}
+
+.eduDegree {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+}
+
+.eduInstitution {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.08em;
+  color: var(--text-secondary);
+  margin-bottom: 0.6rem;
+}
+
+.eduDetails {
+  font-size: var(--text-sm);
+  line-height: 1.65;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 960px) {
+  .editorialGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .leftRail {
+    border-right: none;
+    border-bottom: 1px solid var(--border-hairline-dark);
+    padding-right: 0;
+  }
+
+  .stickyBox {
+    position: static;
+  }
+}
+
+@media (max-width: 680px) {
+  .twoColBlock {
+    grid-template-columns: 1fr;
+  }
+
+  .narrativeCell {
+    border-right: none;
+    border-bottom: 1px solid var(--border-hairline-dark);
+  }
+
+  .narrativeCell:last-child {
+    border-bottom: none;
+  }
+
+  .educationRow {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+}
+

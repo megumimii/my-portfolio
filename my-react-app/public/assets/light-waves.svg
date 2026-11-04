@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" fill="none" preserveAspectRatio="none">
+  <defs>
+    <linearGradient id="waveGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D4D4D8" stop-opacity="0.55" />
+      <stop offset="50%" stop-color="#71717A" stop-opacity="0.28" />
+      <stop offset="100%" stop-color="#E4E4E7" stop-opacity="0.65" />
+    </linearGradient>
+    <linearGradient id="waveGrad2" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#A1A1AA" stop-opacity="0.35" />
+      <stop offset="50%" stop-color="#52525B" stop-opacity="0.18" />
+      <stop offset="100%" stop-color="#F4F4F5" stop-opacity="0.7" />
+    </linearGradient>
+    <linearGradient id="waveGrad3" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#71717A" stop-opacity="0.22" />
+      <stop offset="60%" stop-color="#D4D4D8" stop-opacity="0.45" />
+      <stop offset="100%" stop-color="#A1A1AA" stop-opacity="0.15" />
+    </linearGradient>
+  </defs>
+  <path d="M-120 740 C 320 420, 680 1020, 1140 680 C 1490 420, 1740 580, 2040 310 L 2040 1080 L -120 1080 Z" fill="url(#waveGrad1)" />
+  <path d="M-120 860 C 260 620, 790 980, 1260 610 C 1610 340, 1820 490, 2040 420 L 2040 1080 L -120 1080 Z" fill="url(#waveGrad2)" />
+  <path d="M-120 620 C 420 920, 860 390, 1380 720 C 1690 910, 1880 640, 2040 540 L 2040 1080 L -120 1080 Z" fill="url(#waveGrad3)" />
+  <path d="M-120 690 C 360 460, 740 960, 1220 640 C 1560 410, 1790 540, 2040 340" stroke="#71717A" stroke-opacity="0.28" stroke-width="1.5" />
+  <path d="M-120 820 C 310 960, 820 470, 1340 740 C 1680 910, 1840 620, 2040 490" stroke="#A1A1AA" stroke-opacity="0.4" stroke-width="1" />
+</svg>
+

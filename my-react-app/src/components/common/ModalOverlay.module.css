@@ -1,0 +1,98 @@
+.backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(5, 5, 5, 0.86);
+  backdrop-filter: blur(6px);
+  z-index: var(--z-modal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(0.75rem, 3vw, 2.5rem);
+  animation: fadeIn 220ms var(--ease-editorial);
+}
+
+.dialog {
+  width: 100%;
+  max-height: 90vh;
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-hairline-dark-strong);
+  border-radius: var(--radius-subtle);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  animation: slideUp 320ms var(--ease-editorial);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 1.5rem;
+  background-color: var(--bg-inverted);
+  color: var(--text-on-light);
+  border-bottom: 1px solid var(--border-hairline-light);
+}
+
+.headerMeta {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  flex-wrap: wrap;
+}
+
+.headerTitle {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.headerSubtitle {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--text-on-light-secondary);
+}
+
+.closeBtn {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  padding: 0.35rem 0.7rem;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: opacity var(--duration-fast) ease;
+}
+
+.closeBtn:hover {
+  opacity: 0.85;
+}
+
+.body {
+  padding: clamp(1.25rem, 3vw, 2.5rem);
+  overflow-y: auto;
+  flex: 1;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+

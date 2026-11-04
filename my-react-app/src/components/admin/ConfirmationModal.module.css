@@ -1,0 +1,83 @@
+.modalContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.messageBox {
+  padding: 1.25rem 1.35rem;
+  background-color: var(--bg-primary);
+  border: 1px solid var(--border-hairline-dark-strong);
+}
+
+.messageText {
+  font-size: var(--text-base);
+  line-height: 1.65;
+  color: var(--text-primary);
+}
+
+.actionsRow {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-hairline-dark);
+  flex-wrap: wrap;
+}
+
+.cancelBtn {
+  padding: 0.75rem 1.25rem;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.1em;
+  color: var(--text-secondary);
+  border: 1px solid var(--border-hairline-dark-strong);
+  background-color: transparent;
+  transition:
+    color var(--duration-fast) ease,
+    border-color var(--duration-fast) ease;
+}
+
+.cancelBtn:hover:not(:disabled) {
+  color: var(--text-primary);
+  border-color: var(--text-primary);
+}
+
+.confirmBtn {
+  padding: 0.75rem 1.45rem;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  background-color: var(--bg-inverted);
+  color: var(--text-on-light);
+  border: 1px solid var(--bg-inverted);
+  transition:
+    background-color var(--duration-fast) ease,
+    color var(--duration-fast) ease;
+}
+
+.confirmBtn:hover:not(:disabled) {
+  background-color: transparent;
+  color: var(--text-primary);
+}
+
+.destructive {
+  background-color: var(--status-error);
+  border-color: var(--status-error);
+  color: #ffffff;
+}
+
+.destructive:hover:not(:disabled) {
+  background-color: transparent;
+  color: #fca5a5;
+  border-color: var(--status-error);
+}
+
+.cancelBtn:disabled,
+.confirmBtn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+

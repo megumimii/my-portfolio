@@ -1,0 +1,174 @@
+.toolsSection {
+  position: relative;
+  background-color: var(--bg-primary);
+  border-bottom: 1px solid var(--border-hairline-dark);
+  overflow: hidden;
+}
+
+.metaBar {
+  border-bottom: 1px solid var(--border-hairline-dark);
+  padding: 0.9rem 0;
+}
+
+.metaContainer {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--container-pad);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.sectionCode {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.16em;
+  color: var(--text-secondary);
+}
+
+.sectionHint {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  color: var(--text-muted);
+}
+
+/* Infinite Horizontal Marquee Viewport */
+.marqueeViewport {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.marqueeTrack {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+  animation: infiniteMarqueeScroll 38s linear infinite;
+}
+
+.marqueeViewport:hover .marqueeTrack {
+  animation-play-state: paused;
+}
+
+.marqueeGroup {
+  display: flex;
+  flex-shrink: 0;
+}
+
+@keyframes infiniteMarqueeScroll {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.toolCell {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: clamp(1.5rem, 3vw, 2.35rem) clamp(2rem, 4vw, 3.5rem);
+  border-right: 1px solid var(--border-hairline-dark);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  min-width: 240px;
+  cursor: default;
+  transition:
+    background-color var(--duration-fast) var(--ease-editorial),
+    color var(--duration-fast) var(--ease-editorial),
+    transform var(--duration-fast) var(--ease-editorial);
+}
+
+.toolTopMeta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.toolIndex {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: var(--text-muted);
+  transition: color var(--duration-fast) ease;
+}
+
+.toolCategory {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  transition: color var(--duration-fast) ease;
+}
+
+.toolName {
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 3.2vw, 2.75rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+/* Polarity Inversion on Hover */
+.toolCell:hover {
+  background-color: var(--bg-inverted);
+  color: var(--text-on-light);
+}
+
+.toolCell:hover .toolIndex,
+.toolCell:hover .toolCategory {
+  color: var(--text-on-light-secondary);
+}
+
+/* Reduced Motion Fallback Grid */
+.reducedMotionGrid {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+}
+
+/* Empty State Notice when no technologies are added */
+.emptyNotice {
+  padding: 3rem var(--container-pad);
+  max-width: var(--container-max);
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+  font-family: var(--font-mono);
+}
+
+.emptyCode {
+  color: var(--text-secondary);
+  font-size: var(--text-xs);
+  letter-spacing: 0.12em;
+}
+
+.emptyDesc {
+  color: var(--text-muted);
+  font-size: var(--text-xs);
+  letter-spacing: 0.04em;
+}
+
+@media (max-width: 640px) {
+  .sectionHint {
+    display: none;
+  }
+
+  .toolCell {
+    min-width: 190px;
+    padding: 1.35rem 1.75rem;
+  }
+}
+

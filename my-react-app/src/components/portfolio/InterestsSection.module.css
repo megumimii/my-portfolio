@@ -1,0 +1,66 @@
+.interestsSection {
+  position: relative;
+  background-color: var(--bg-inverted);
+  color: var(--text-on-light);
+  padding: var(--section-pad-y) 0;
+  border-bottom: 1px solid var(--border-hairline-light-strong);
+  overflow: hidden;
+}
+
+.container {
+  position: relative;
+  z-index: var(--z-foreground);
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--container-pad);
+}
+
+.controlsRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+  padding-bottom: 1.75rem;
+  margin-bottom: 2.5rem;
+  border-bottom: 1px solid var(--border-hairline-light-strong);
+}
+
+.specimenGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(1.5rem, 2.5vw, 2.25rem);
+  align-items: start;
+}
+
+.emptyBox {
+  padding: 3.5rem 2rem;
+  border: 1px solid var(--border-hairline-light-strong);
+  background-color: rgba(255, 255, 255, 0.85);
+  text-align: center;
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+}
+
+.resetButton {
+  margin-top: 1rem;
+  padding: 0.6rem 1.15rem;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.1em;
+}
+
+@media (max-width: 1024px) {
+  .specimenGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 680px) {
+  .specimenGrid {
+    grid-template-columns: 1fr;
+  }
+}
+

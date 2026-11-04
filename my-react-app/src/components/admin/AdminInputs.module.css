@@ -1,0 +1,116 @@
+.builderContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.headerRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.fieldLabel {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: var(--text-secondary);
+}
+
+.tagInputRow {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.textInput {
+  flex: 1;
+  width: 100%;
+  padding: 0.7rem 0.85rem;
+  background-color: var(--bg-primary);
+  border: 1px solid var(--border-hairline-dark-strong);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+}
+
+.textInput:focus {
+  outline: none;
+  border-color: var(--bg-inverted);
+}
+
+.addBtn {
+  padding: 0.55rem 0.95rem;
+  background-color: var(--bg-inverted);
+  color: var(--text-on-light);
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  white-space: nowrap;
+}
+
+.chipList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-top: 0.25rem;
+}
+
+.tagChip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.3rem 0.6rem;
+  background-color: var(--bg-primary);
+  border: 1px solid var(--border-hairline-dark-strong);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--text-primary);
+}
+
+.removeChipBtn {
+  font-size: 0.9rem;
+  line-height: 1;
+  color: var(--text-secondary);
+}
+
+.removeChipBtn:hover {
+  color: var(--status-error);
+}
+
+.emptyHint {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--text-muted);
+}
+
+.pairList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.pairRow {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr auto;
+  gap: 0.55rem;
+  align-items: center;
+}
+
+.deleteRowBtn {
+  padding: 0.7rem 0.8rem;
+  border: 1px solid var(--border-hairline-dark-strong);
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: #fca5a5;
+}
+
+@media (max-width: 640px) {
+  .pairRow {
+    grid-template-columns: 1fr;
+  }
+}
+

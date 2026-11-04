@@ -1,0 +1,48 @@
+.waveContainer {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: var(--z-waves);
+}
+
+.waveSvg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.wavePathSlow {
+  animation: waveDriftSlow 22s ease-in-out infinite alternate;
+  transform-origin: center;
+}
+
+.wavePathMedium {
+  animation: waveDriftMedium 16s ease-in-out infinite alternate-reverse;
+  transform-origin: center;
+}
+
+.wavePathFast {
+  animation: waveDriftSlow 19s ease-in-out infinite alternate;
+}
+
+@keyframes waveDriftSlow {
+  0% {
+    transform: translate3d(0, 0, 0) scaleY(1);
+  }
+  100% {
+    transform: translate3d(-1.5%, 1.2%, 0) scaleY(1.03);
+  }
+}
+
+@keyframes waveDriftMedium {
+  0% {
+    transform: translate3d(0, 0, 0) scaleX(1);
+  }
+  100% {
+    transform: translate3d(1.5%, -1%, 0) scaleX(1.02);
+  }
+}
+

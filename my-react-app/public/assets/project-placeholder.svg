@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" fill="none">
+  <rect width="1600" height="1000" fill="#101012" />
+  <!-- Architectural Blueprint Hairline Grid -->
+  <line x1="0" y1="200" x2="1600" y2="200" stroke="#1F1F23" stroke-width="1" />
+  <line x1="0" y1="500" x2="1600" y2="500" stroke="#27272A" stroke-width="1" />
+  <line x1="0" y1="800" x2="1600" y2="800" stroke="#1F1F23" stroke-width="1" />
+  <line x1="320" y1="0" x2="320" y2="1000" stroke="#1F1F23" stroke-width="1" />
+  <line x1="800" y1="0" x2="800" y2="1000" stroke="#27272A" stroke-width="1" />
+  <line x1="1280" y1="0" x2="1280" y2="1000" stroke="#1F1F23" stroke-width="1" />
+
+  <!-- Subtle Flowing Wave Ribbon -->
+  <path d="M-100 720 C 380 420, 920 880, 1700 340" stroke="#3F3F46" stroke-width="1.5" />
+  <path d="M-100 780 C 420 480, 960 940, 1700 400" stroke="#27272A" stroke-width="1" />
+
+  <!-- Center Geometric Frame -->
+  <rect x="560" y="320" width="480" height="360" stroke="#3F3F46" stroke-width="1.5" fill="#141417" />
+  <circle cx="800" cy="500" r="90" stroke="#52525B" stroke-width="1.2" stroke-dasharray="4 6" />
+  <line x1="560" y1="320" x2="1040" y2="680" stroke="#27272A" stroke-width="1" />
+  <line x1="1040" y1="320" x2="560" y2="680" stroke="#27272A" stroke-width="1" />
+</svg>
+

@@ -1,0 +1,133 @@
+.header {
+  width: 100%;
+  margin-bottom: clamp(2.5rem, 5vw, 4.5rem);
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity var(--duration-slow) var(--ease-editorial),
+    transform var(--duration-slow) var(--ease-editorial);
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.topMetaRow {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.indexLabel {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.hairlineRule {
+  flex: 1;
+  height: 1px;
+  transform-origin: left center;
+  transform: scaleX(0.15);
+  transition: transform 0.95s var(--ease-editorial) 0.1s;
+}
+
+.visible .hairlineRule {
+  transform: scaleX(1);
+}
+
+.handwrittenNote {
+  font-family: var(--font-hand);
+  font-size: 1.5rem;
+  font-weight: 600;
+  transform: rotate(-2deg);
+  white-space: nowrap;
+}
+
+.mainRow {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.titleBlock {
+  max-width: 780px;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: var(--text-3xl);
+  font-weight: 700;
+  letter-spacing: -0.035em;
+  text-transform: uppercase;
+  line-height: 0.98;
+}
+
+.subtitle {
+  margin-top: 0.85rem;
+  font-size: var(--text-base);
+  line-height: 1.65;
+  max-width: 62ch;
+}
+
+.rightSlot {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Dark Theme */
+.dark .indexLabel {
+  color: var(--text-secondary);
+}
+
+.dark .hairlineRule {
+  background-color: var(--border-hairline-dark);
+}
+
+.dark .handwrittenNote {
+  color: var(--text-secondary);
+}
+
+.dark .title {
+  color: var(--text-primary);
+}
+
+.dark .subtitle {
+  color: var(--text-secondary);
+}
+
+/* Light Theme (Interests & White Sections) */
+.light .indexLabel {
+  color: var(--text-on-light-secondary);
+}
+
+.light .hairlineRule {
+  background-color: var(--border-hairline-light-strong);
+}
+
+.light .handwrittenNote {
+  color: var(--text-on-light-secondary);
+}
+
+.light .title {
+  color: var(--text-on-light);
+}
+
+.light .subtitle {
+  color: var(--text-on-light-secondary);
+}
+
+@media (max-width: 640px) {
+  .handwrittenNote {
+    display: none;
+  }
+}
+

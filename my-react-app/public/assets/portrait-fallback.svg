@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" fill="none">
+  <defs>
+    <linearGradient id="silhouetteGrad" x1="50%" y1="0%" x2="50%" y2="100%">
+      <stop offset="0%" stop-color="#3F3F46" />
+      <stop offset="55%" stop-color="#18181B" />
+      <stop offset="100%" stop-color="#0A0A0A" />
+    </linearGradient>
+    <linearGradient id="rimLight" x1="0%" y1="0%" x2="100%" y2="60%">
+      <stop offset="0%" stop-color="#FAFAFA" stop-opacity="0.55" />
+      <stop offset="45%" stop-color="#A1A1AA" stop-opacity="0.12" />
+      <stop offset="100%" stop-color="#0A0A0A" stop-opacity="0" />
+    </linearGradient>
+    <linearGradient id="bottomFade" x1="50%" y1="62%" x2="50%" y2="100%">
+      <stop offset="0%" stop-color="#0A0A0A" stop-opacity="0" />
+      <stop offset="100%" stop-color="#0A0A0A" stop-opacity="1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Subtle Technical Reticle Behind Portrait -->
+  <circle cx="400" cy="360" r="260" stroke="#27272A" stroke-width="1" stroke-dasharray="4 6" />
+  <line x1="400" y1="40" x2="400" y2="960" stroke="#1F1F23" stroke-width="1" />
+  <line x1="80" y1="360" x2="720" y2="360" stroke="#1F1F23" stroke-width="1" />
+
+  <!-- Editorial Sculpted Monochrome Silhouette -->
+  <!-- Shoulders & Suit Jacket -->
+  <path d="M110 1000 C 125 730, 210 620, 320 580 L 480 580 C 590 620, 675 730, 690 1000 Z" fill="url(#silhouetteGrad)" stroke="url(#rimLight)" stroke-width="2" />
+  <!-- Collar Lapels -->
+  <path d="M320 580 L 400 760 L 480 580" stroke="#3F3F46" stroke-width="1.5" fill="#121214" />
+  <!-- Neck -->
+  <path d="M348 470 L 452 470 L 462 595 L 338 595 Z" fill="#222226" />
+  <!-- Head & Hair Architectural Form -->
+  <path d="M275 310 C 275 190, 330 140, 400 140 C 470 140, 525 190, 525 310 C 525 420, 470 495, 400 495 C 330 495, 275 420, 275 310 Z" fill="url(#silhouetteGrad)" stroke="url(#rimLight)" stroke-width="2" />
+  <!-- Stylized Hair & Rim Contour -->
+  <path d="M268 295 C 260 210, 315 125, 405 125 C 485 125, 540 190, 532 285 C 510 220, 455 195, 395 205 C 335 215, 295 245, 268 295 Z" fill="#18181B" stroke="#52525B" stroke-width="1.2" />
+
+  <!-- Seamless Bottom Vignette Dissolve -->
+  <rect x="0" y="580" width="800" height="420" fill="url(#bottomFade)" />
+</svg>
+

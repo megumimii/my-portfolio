@@ -1,0 +1,92 @@
+:root {
+  /* ==========================================================================
+   * COLOR PALETTE — MONOCHROME KINETIC MONOGRAPH
+   * Pitch-black primary canvas, pure-white contrast surfaces, architectural grays
+   * ========================================================================== */
+  --bg-primary: #0a0a0a;
+  --bg-secondary: #101010;
+  --bg-elevated: #161616;
+  --bg-elevated-hover: #1f1f1f;
+  --bg-glass-dark: rgba(10, 10, 10, 0.88);
+
+  --bg-inverted: #ffffff;
+  --bg-inverted-subtle: #f4f4f5;
+  --bg-inverted-muted: #e4e4e7;
+
+  /* Typography Colors on Dark Surfaces */
+  --text-primary: #fafafa;
+  --text-secondary: #a1a1aa;
+  --text-muted: #52525b;
+  --text-faint: #27272a;
+
+  /* Typography Colors on Light/White Surfaces */
+  --text-on-light: #0a0a0a;
+  --text-on-light-secondary: #52525b;
+  --text-on-light-muted: #71717a;
+
+  /* Structural Hairlines & Borders */
+  --border-hairline-dark: #222222;
+  --border-hairline-dark-strong: #3f3f46;
+  --border-hairline-light: #e4e4e7;
+  --border-hairline-light-strong: #a1a1aa;
+
+  /* Functional Feedback (Restrained Editorial Monochrome + Subtle Status) */
+  --status-error: #ef4444;
+  --status-success: #22c55e;
+  --status-warning: #f59e0b;
+
+  /* ==========================================================================
+   * TYPOGRAPHY TOKENS
+   * ========================================================================== */
+  --font-display: 'Space Grotesk', 'Syne', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-monument: 'Syne', 'Space Grotesk', sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-hand: 'Caveat', 'Reenie Beanie', cursive;
+  --font-script: 'Reenie Beanie', 'Caveat', cursive;
+
+  /* Fluid Type Scale */
+  --text-xs: 0.75rem;      /* 12px - Technical coordinates & tags */
+  --text-sm: 0.875rem;     /* 14px - Secondary labels & nav */
+  --text-base: 1rem;       /* 16px - Editorial body */
+  --text-lg: 1.125rem;     /* 18px - Lead paragraphs */
+  --text-xl: 1.35rem;      /* 21.6px - Subheadings */
+  --text-2xl: clamp(1.5rem, 2.5vw, 2.25rem);
+  --text-3xl: clamp(2rem, 4vw, 3.5rem);
+  --text-4xl: clamp(2.75rem, 6vw, 5.5rem);
+  --text-monument: clamp(8.5rem, 28vw, 32rem);
+
+  /* ==========================================================================
+   * SPACING, GRID & GEOMETRY (CRISP, NO GENERIC ROUNDED SAAS CARDS)
+   * ========================================================================== */
+  --navbar-height: 68px;
+  --container-max: 1440px;
+  --container-pad: clamp(1.25rem, 4vw, 4rem);
+  --section-pad-y: clamp(5rem, 10vw, 9rem);
+
+  --radius-sharp: 0px;
+  --radius-subtle: 2px;
+
+  /* ==========================================================================
+   * MOTION & EASING
+   * ========================================================================== */
+  --ease-editorial: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out-quart: cubic-bezier(0.76, 0, 0.24, 1);
+  --duration-fast: 180ms;
+  --duration-base: 380ms;
+  --duration-slow: 750ms;
+
+  /* ==========================================================================
+   * Z-INDEX HIERARCHY
+   * ========================================================================== */
+  --z-backdrop: 0;
+  --z-monument-type: 1;
+  --z-waves: 2;
+  --z-portrait: 3;
+  --z-foreground: 4;
+  --z-navbar: 50;
+  --z-modal-backdrop: 90;
+  --z-modal: 100;
+  --z-toast: 120;
+}
+
