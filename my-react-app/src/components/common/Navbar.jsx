@@ -17,7 +17,7 @@ const NAV_ITEMS = [
   { id: 'about', index: '01', label: 'ABOUT' },
   { id: 'thought-process', index: '02', label: 'PROCESS' },
   { id: 'tools', index: '03', label: 'STACK' },
-  { id: 'projects', index: '04', label: 'WORK' },
+  { id: 'projects', index: '04', label: 'PROJECTS' },
   { id: 'interests', index: '05', label: 'BEYOND CODE' },
   { id: 'contact', index: '06', label: "LET'S TALK" },
 ];
